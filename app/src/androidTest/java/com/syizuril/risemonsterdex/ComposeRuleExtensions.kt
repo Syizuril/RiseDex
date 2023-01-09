@@ -1,0 +1,15 @@
+package com.syizuril.risemonsterdex
+
+import androidx.activity.ComponentActivity
+import androidx.annotation.StringRes
+import androidx.compose.ui.test.SemanticsNodeInteraction
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
+import androidx.compose.ui.test.onNodeWithText
+import androidx.test.ext.junit.rules.ActivityScenarioRule
+
+/**
+ * Created by Syekh Syihabuddin Azmil Umri on 29/12/2022.
+ */
+fun <A : ComponentActivity> AndroidComposeTestRule<ActivityScenarioRule<A>, A>.onNodeWithStringId(
+    @StringRes id: Int,
+): SemanticsNodeInteraction = onNodeWithText(activity.getString(id))

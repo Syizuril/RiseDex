@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">RiseDex</string>
+    <string name="fire">fire</string>
+    <string name="ice">ice</string>
+    <string name="thunder">thunder</string>
+    <string name="dragon">dragon</string>
+    <string name="water">water</string>
+    <string name="text_home">Home</string>
+    <string name="about">About</string>
+    <string name="search_monster">Search Monster</string>
+    <string name="text_details">Details</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="what_is_risedex">What is Risedex ?</string>
+    <string name="risedex_desc">Risedex is a fan-made app that helps Monster Hunter Rise: Sunbreak hunters learn more about the various monsters they\'ll encounter. It provides simple information on each monster\'s weaknesses, allowing hunters to plan the best strategy to take them down. For example, if a monster has a fire weakness, Risedex can help hunters find the right weapons and skills to exploit that weakness. In addition to technical information, Risedex also includes images of each monster to help hunters understand their appearance and behavior. By using Risedex, hunters can better prepare their strategies and improve their hunting skills.</string>
+    <string name="disclaimer_title">Disclaimer</string>
+    <string name="disclaimer_desc">Attention Monster Hunter fans! Risedex is a fan-made app created by passionate fans like you. However, please note that this app is not affiliated with, sponsored by, or officially connected to Capcom in any way. Risedex is simply meant to provide additional information and enjoyment for fans of the Monster Hunter franchise. All monster and character names are copyright to their respective owners. Some of the illustration images used in this app were sourced from Know Your Meme. The information displayed in this app was sourced from Kuranico, a fan-made website for Monster Hunter which directly extracts data from the game Monster Hunter Rise: Sunbreak. We cannot be held responsible for any errors or omissions in the information provided in this app. Use of this app is at your own risk and we are not liable for any damages that may occur. Enjoy exploring the world of Monster Hunter with Risedex!\n\n©CAPCOM CO., LTD. 2021, 2022.</string>
+    <string name="author_name">Syekh Syihabuddin Azmil Umri</string>
+    <string name="author_email">syekh.syihabuddin@gmail.com</string>
+    <string name="app_desc">Simple Monster Hunter Rise Weakness Information For You, Hunter !</string>
+    <string name="contact">Contact Me</string>
+    <string name="about_app">About App</string>
+    <string name="please_wait">Please wait....................</string>
+    <string name="legal_desc">By using RiseDex, you acknowledge that you have carefully read and fully understood our Privacy Policy and Terms of Service. By accessing and using our app, you are agreeing to be bound by the terms and conditions outlined in these documents. If you have any questions or concerns, we encourage you to review them again by clicking the buttons below. Your continued use of RiseDex signifies your acceptance of these policies and terms.</string>
+    <string name="legal">Legal</string>
+    <string name="privacypolicy">Privacy Policy</string>
+    <string name="termscondition"><![CDATA[Terms & Condition]]></string>
+</resources>
