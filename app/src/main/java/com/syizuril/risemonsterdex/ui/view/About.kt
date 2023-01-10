@@ -195,7 +195,7 @@ fun About(
                             shape = RoundedCornerShape(8.dp),
                             colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colors.background, backgroundColor = MaterialTheme.colors.onSurface),
                             onClick = {
-                                navController.navigate("privacy/privacypolicy.txt")
+                                navController.navigate("privacy/privacypolicy.md")
                             },
                         ) {
                             Text(text = stringResource(R.string.privacypolicy),
@@ -212,7 +212,7 @@ fun About(
                             shape = RoundedCornerShape(8.dp),
                             colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colors.background, backgroundColor = MaterialTheme.colors.onSurface),
                             onClick = {
-                                navController.navigate("privacy/termscondition.txt")
+                                navController.navigate("privacy/termscondition.md")
                             },
                         ) {
                             Text(text = stringResource(R.string.termscondition),

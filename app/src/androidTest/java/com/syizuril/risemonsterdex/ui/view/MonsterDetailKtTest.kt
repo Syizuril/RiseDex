@@ -53,6 +53,11 @@ class MonsterDetailKtTest{
 
     @Test
     fun detailMonster_isDisplayed(){
+        composeTestRule.waitUntil {
+            composeTestRule
+                .onAllNodesWithText(fakeMonster.name)
+                .fetchSemanticsNodes().size == 1
+        }
         composeTestRule.onNodeWithText(fakeMonster.name).assertIsDisplayed()
         composeTestRule.onNodeWithText(fakeMonster.antiSpecies).assertIsDisplayed()
         composeTestRule.onNodeWithText(fakeMonster.type).assertIsDisplayed()

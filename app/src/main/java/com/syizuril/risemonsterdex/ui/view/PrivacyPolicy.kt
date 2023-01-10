@@ -19,7 +19,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.halilibo.richtext.markdown.Markdown
-import com.halilibo.richtext.markdown.MarkdownParseOptions
 import com.halilibo.richtext.ui.RichText
 import com.syizuril.risemonsterdex.R
 import com.syizuril.risemonsterdex.ui.theme.blueBG
@@ -76,7 +75,7 @@ fun PrivacyPolicy(
                 )
             }
             Text(
-                text = if(fileName=="privacypolicy.txt") stringResource(id = R.string.privacy_policy) else stringResource(
+                text = if(fileName=="privacypolicy.md") stringResource(id = R.string.privacy_policy) else stringResource(
                     id = R.string.termscondition
                 ),
                 color = MaterialTheme.colors.surface,

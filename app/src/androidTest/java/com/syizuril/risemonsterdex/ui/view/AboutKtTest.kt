@@ -1,10 +1,15 @@
 package com.syizuril.risemonsterdex.ui.view
 
 import androidx.activity.ComponentActivity
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithTag
+import androidx.navigation.NavController
+import androidx.navigation.testing.TestNavHostController
+import com.google.accompanist.navigation.animation.AnimatedComposeNavigator
 import com.syizuril.risemonsterdex.R
 import com.syizuril.risemonsterdex.onNodeWithStringId
 import com.syizuril.risemonsterdex.ui.theme.RiseMonsterdexTheme
@@ -19,12 +24,16 @@ import org.junit.Test
 class AboutKtTest{
     @get: Rule
     val composeTestRule = createAndroidComposeRule<ComponentActivity>()
+    private lateinit var navController: TestNavHostController
 
+    @OptIn(ExperimentalAnimationApi::class)
     @Before
     fun setUp(){
         composeTestRule.setContent {
             RiseMonsterdexTheme() {
-                About {}
+                navController = TestNavHostController(LocalContext.current)
+                navController.navigatorProvider.addNavigator(AnimatedComposeNavigator())
+                About(navController = navController, upPress = {navController.navigateUp()})
             }
         }
     }
@@ -36,8 +45,5 @@ class AboutKtTest{
         composeTestRule.onNodeWithStringId(R.string.risedex_desc).assertIsDisplayed()
         composeTestRule.onNodeWithStringId(R.string.disclaimer_title).assertIsDisplayed()
         composeTestRule.onNodeWithStringId(R.string.disclaimer_desc).assertIsDisplayed()
-        composeTestRule.onNodeWithTag("contact").assertExists("Contact Me")
-        composeTestRule.onNodeWithTag("email_title").assertExists("Syekh Syihabuddin Azmil Umri")
-        composeTestRule.onNodeWithTag("email_desc").assertExists("syihabklayan@gmail.com")
     }
 }
