@@ -24,4 +24,6 @@
     <string name="legal">Legal</string>
     <string name="privacypolicy">Privacy Policy</string>
     <string name="termscondition"><![CDATA[Terms & Condition]]></string>
+    <string name="support"><![CDATA[Support & Contribute]]></string>
+    <string name="support_desc">If you find Risedex useful, please consider supporting its development by clicking the button and making a contribution. Your support will help us to continue improving the app and providing valuable resources for the Monster Hunter community. Every little bit helps and we greatly appreciate your help. If you have any complaints or questions please reach us through the email provided in the button below, and we will do our best to assist you. Thanks for helping us to make Risedex even better!</string>
 </resources>

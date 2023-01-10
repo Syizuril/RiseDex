@@ -1,5 +1,10 @@
 package com.syizuril.risemonsterdex.ui.view
 
+import android.content.ActivityNotFoundException
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.util.Log
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -14,6 +19,7 @@ import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -138,7 +144,7 @@ fun About(
                         style = MaterialTheme.typography.h5,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(top = 16.dp, bottom = 4.dp)
                     )
                     Text(
                         text = stringResource(R.string.disclaimer_desc),
@@ -167,7 +173,7 @@ fun About(
                         style = MaterialTheme.typography.h5,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(top = 16.dp, bottom = 4.dp)
                     )
                     Text(
                         text = stringResource(R.string.legal_desc),
@@ -225,66 +231,97 @@ fun About(
                 backgroundColor = MaterialTheme.colors.onSurface,
                 shape = RoundedCornerShape(8.dp),
                 modifier = Modifier
-                    .padding(top = 8.dp, bottom = 16.dp, start = 16.dp, end = 16.dp)
+                    .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp)
             ){
                 Column() {
                     Text(
-                        text = stringResource(R.string.contact),
+                        text = stringResource(R.string.support),
                         color = MaterialTheme.colors.surface,
                         fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center,
                         style = MaterialTheme.typography.h5,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(8.dp)
-                            .testTag("contact")
+                            .padding(top = 16.dp, bottom = 4.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.support_desc),
+                        color = MaterialTheme.colors.surface,
+                        fontWeight = FontWeight.Normal,
+                        textAlign = TextAlign.Left,
+                        style = MaterialTheme.typography.caption,
+                        modifier = Modifier
+                            .padding(start = 16.dp, end = 16.dp, bottom = 16.dp, top = 4.dp)
                     )
                     Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.align(CenterHorizontally)
-                    )
-                    {
-                        AsyncImage(
-                            model = "https://i.ibb.co/9r5FpYN/273841178-4933766366710336-7555927456093166882-n.jpg",
-                            contentDescription = "profile_dev",
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier
-                                .padding(start = 16.dp, top = 8.dp, bottom = 16.dp, end = 8.dp)
-                                .clip(CircleShape)
-                                .border(
-                                    BorderStroke(2.dp, MaterialTheme.colors.surface),
-                                    CircleShape
-                                )
-                                .size(48.dp)
-                        )
-                        Column(
-                            modifier = Modifier
-                                .padding(8.dp, 8.dp, 16.dp, 16.dp)
+                        horizontalArrangement = Arrangement.SpaceEvenly,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp)
+                    ) {
+                        val context = LocalContext.current
+                        OutlinedButton(
+                            border = BorderStroke(1.dp, MaterialTheme.colors.background),
+                            shape = RoundedCornerShape(8.dp),
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colors.background, backgroundColor = MaterialTheme.colors.onSurface),
+                            onClick = {
+                                  context.sendMail(
+                                      to = "syekh.syihabuddin@gmail.com",
+                                      subject = "RiseDex Support"
+                                  )
+                            },
                         ) {
-                            Text(
-                                text = stringResource(R.string.author_name),
-                                color = MaterialTheme.colors.surface,
-                                fontWeight = FontWeight.Bold,
-                                textAlign = TextAlign.Start,
-                                style = MaterialTheme.typography.subtitle1,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .testTag("email_title")
-                            )
-                            Text(
-                                text = stringResource(R.string.author_email),
+                            Text(text = "Contact Me",
                                 color = MaterialTheme.colors.surface,
                                 fontWeight = FontWeight.Normal,
-                                textAlign = TextAlign.Start,
-                                style = MaterialTheme.typography.subtitle2,
+                                textAlign = TextAlign.Center,
+                                style = MaterialTheme.typography.caption,
                                 modifier = Modifier
-                                    .fillMaxWidth()
-                                    .testTag("email_desc")
+                                    .padding(8.dp)
                             )
+                        }
+                        OutlinedButton(
+                            border = BorderStroke(1.dp, MaterialTheme.colors.background),
+                            shape = RoundedCornerShape(8.dp),
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colors.background, backgroundColor = MaterialTheme.colors.onSurface),
+                            onClick = {
+                                context.openRepository()
+                            },
+                        ) {
+                            Text(text = "Repository Github",
+                                color = MaterialTheme.colors.surface,
+                                fontWeight = FontWeight.Normal,
+                                textAlign = TextAlign.Left,
+                                style = MaterialTheme.typography.caption,
+                                modifier = Modifier
+                                    .padding(8.dp))
                         }
                     }
                 }
             }
         }
+    }
+}
+
+fun Context.sendMail(to: String, subject: String) {
+    try {
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "vnd.android.cursor.item/email" // or "message/rfc822"
+        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(to))
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject)
+        startActivity(intent)
+    } catch (e: ActivityNotFoundException) {
+        Log.d("MAIL ERROR", "Activity Not Found")
+    } catch (t: Throwable) {
+        Log.d("MAIL ERROR", "Error : "+t.message)
+    }
+}
+
+fun Context.openRepository(){
+    try {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Syizuril/RiseDex"))
+        startActivity(intent)
+    }catch (e: Throwable) {
+        Log.d("MAIL ERROR", "Error : "+e.message)
     }
 }
