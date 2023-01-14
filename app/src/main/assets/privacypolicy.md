@@ -17,6 +17,7 @@ The app does use third-party services that may collect information used to ident
 Link to the privacy policy of third-party service providers used by the app
 
 *   [Google Play Services](https://www.google.com/policies/privacy/)
+*   [Amazon App](https://developer.amazon.com/docs/policy-center/privacy-security.html)
 
 **Log Data**
 
