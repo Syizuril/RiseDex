@@ -12,9 +12,9 @@ Technical details
 This app is built with Kotlin programming language and uses Jetpack Compose as the architecture.
 
 # Licenses
-Kotlin: Apache License 2.0
-Jetpack Compose: Apache License 2.0
-Any other dependencies used in this app are under their respective licenses.
+- Kotlin: Apache License 2.0
+- Jetpack Compose: Apache License 2.0
+- Any other dependencies used in this app are under their respective licenses.
 
 # Contributions
 We are open to contributions and pull requests to improve the app. Please make sure to follow the coding standards and submit a detailed pull request with the changes made.
