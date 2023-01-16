@@ -1,4 +1,5 @@
 # RiseDex
+![RiseDex Banner](https://github.com/Syizuril/RiseDex/blob/main/banner/Banner%20FHD.JPG)
 RiseDex is an open-source hunting companion app for Monster Hunter Rise : Sunbreak players. The app provides detailed information about each of the game's monsters, including their elemental weakness, type, anti species, simple description, average element weakness (eHZV), element exploit areas (eHZV), average raw weakness (rHZV), weakness exploit areas and more. With RiseDex, you'll have all the information you need at your fingertips to make the most of your hunting experience.
 
 # Features
