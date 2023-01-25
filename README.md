@@ -14,8 +14,12 @@ Offline access, so you don't need an internet connection to access the informati
 Dark and light mode options, so you can hunt at any time, any place.
 Powerful search feature, so you can find the monster information you need quickly and easily.
 No ads, so you can focus on hunting.
-Technical details
+
+# Technical details
 This app is built with Kotlin programming language and uses Jetpack Compose as the architecture.
+
+# TO-DO List
+- Afflicted Monster Drop Database ( Coming Soon )
 
 # Licenses
 - Kotlin: Apache License 2.0
