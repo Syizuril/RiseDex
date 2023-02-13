@@ -48,6 +48,7 @@ fun MonsterRawWeakness(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
+                .padding(vertical = 8.dp)
         ) {
             val maxValue = maxOf(monster.rHVZsword, monster.rHVZbow, monster.rHVZhammer)
             BarChart(
@@ -57,7 +58,7 @@ fun MonsterRawWeakness(
                 max = maxValue,
                 textColor = captionColor,
                 modifier = Modifier
-                    .padding(top = 16.dp, bottom = 8.dp)
+                    .padding(top = 8.dp, bottom = 8.dp)
             )
             BarChart(
                 icon = painterResource(id = R.drawable.hammer_icon),
