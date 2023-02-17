@@ -24,7 +24,7 @@ This app is built with Kotlin programming language and uses Jetpack Compose as t
 # Licenses
 - Kotlin: Apache License 2.0
 - Jetpack Compose: Apache License 2.0
-- [MH Rise Monster Weakness (v13.0.0)](https://docs.google.com/spreadsheets/d/1js5KCPF8mJ5m9m8Zi4F5n_EXnwh9PCDJmYgPJCd3AGY/)
+- [MH Rise Monster Weakness (v14.0.0)](https://docs.google.com/spreadsheets/d/1js5KCPF8mJ5m9m8Zi4F5n_EXnwh9PCDJmYgPJCd3AGY/)
 - Any other dependencies used in this app are under their respective licenses.
 
 # Contributions
