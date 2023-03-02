@@ -103,12 +103,12 @@ fun getElementIcon(weakness: String): Painter {
                 true
             ) -> painterResource(id = R.drawable.dragon_element)
             contains(stringResource(id = R.string.fire), true) -> painterResource(id = R.drawable.fire_element)
-            contains(stringResource(id = R.string.ice), true) -> painterResource(id = R.drawable.water_element)
+            contains(stringResource(id = R.string.ice), true) -> painterResource(id = R.drawable.ice_element)
             contains(
                 stringResource(id = R.string.thunder),
                 true
             ) -> painterResource(id = R.drawable.thunder_element)
-            contains(stringResource(id = R.string.water), true) -> painterResource(id = R.drawable.ice_element)
+            contains(stringResource(id = R.string.water), true) -> painterResource(id = R.drawable.water_element)
             else -> painterResource(id = R.drawable.dragon_element)
         }
     }
