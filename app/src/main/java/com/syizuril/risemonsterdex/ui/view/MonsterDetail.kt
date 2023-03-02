@@ -57,7 +57,6 @@ fun MonsterDetail(
     var colorPalette by remember { mutableStateOf<Palette?>(null) }
     var colorTheme by remember { mutableStateOf<Color?>(blueText) }
     var textColor by remember { mutableStateOf<Color?>(blueText) }
-    bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.ice_frame)
     var captionColor by remember { mutableStateOf<Color?>(blueText) }
     val listMeme = listOf(
         R.drawable.meme_satu,
@@ -67,6 +66,7 @@ fun MonsterDetail(
     var failedConnection by remember { mutableStateOf<Boolean>(false) }
     val isDark = isSystemInDarkTheme()
     LaunchedEffect(key1 = monster.name) {
+        bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.ice_frame)
         val loader = ImageLoader(context)
         val request = ImageRequest.Builder(context)
             .data(monster.image)

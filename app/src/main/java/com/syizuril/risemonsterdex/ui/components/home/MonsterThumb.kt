@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.syizuril.risemonsterdex.R
 import com.syizuril.risemonsterdex.model.Monster
-import com.syizuril.risemonsterdex.ui.components.home.getPainter
 
 /**
  * Created by Syekh Syihabuddin Azmil Umri on 25/12/2022.
