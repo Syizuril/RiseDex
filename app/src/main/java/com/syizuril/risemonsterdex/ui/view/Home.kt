@@ -75,14 +75,14 @@ fun Home(
 
             }
             groupedMonster.forEach { (_, monsters) ->
-                items(monsters, key = { it.name }) { monster ->
+                items(monsters, key = { it.name }, itemContent = { monster ->
                     MonsterItem(
                         monster,
                         onItemClicked = {
                             navController.navigate("details/${it.name}")
                         }
                     )
-                }
+                })
             }
         }
     }
