@@ -380,6 +380,28 @@ object FakeMonsterDataSource {
                 "https://i.ibb.co/Y8cY5Sg/MHRS-Malzeno-Icon.png",
                 "\"A dragon covered with elegant silver scales. It uses the Qurio to drain the life energy of other living creatures, creeping around at night and attacking its prey from behind. It appears almost regal to start with, but after draining enough energy it can turn a violent, fresh-blood crimson. This form is known as the \"\"Bloodening\"\" and is widely feared.\""
         ),Monster(
+                    "Primordial Malzeno",
+                    "Anti-Aerial",
+                    "Elder Dragon",
+                    "Dragon",
+                    "",
+                    "Head",
+                    "Head + Foreleg",
+                    11,
+                    0,
+                    0,
+                    7,
+                    18,
+                    "Head + Torso + Foreleg + Hind Leg + Tail + Tail Tip",
+                    "Head + Torso + Foreleg + Hind Leg + Tail + Tail Tip",
+                    "Head + Foreleg",
+                    40,
+                    39,
+                    22,
+                    "https://i.ibb.co.com/sm13jdc/mandatory-mh-rise-sunbreak-malzeno-primordial-Custom.jpg",
+                    "https://i.ibb.co.com/CsjxxRQ/MHRS-Primordial-Malzeno-Icon-2.png",
+                    "\"Malzeno's original form before it was tainted by the Qurio. Ordinarily, it uses its wings and tail with the elegance of a knight, but under the Qurio's influence, it uses underhanded means of cornering its prey, and in its \"Bloodlust\" state it wields tremendous power. Because of the explosive energy corrupting its body, it sometimes shows behavior as if its struggling against an overwhelming force.\""
+        ),Monster(
                 "Pyre Rakna-Kadaki",
                 "N/A",
                 "Temnoceran",
